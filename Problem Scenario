@@ -1,0 +1,17 @@
+The problem scenario we addressed was the lack of flexibility and code reusability in the original character class implementation. 
+The original code used a single Character class with conditional statements to determine the attack and defense behavior based on the character type ("Knight", "Wizard", or "Archer").
+
+This approach had limitations:
+
+Code duplication: The attack and defense logic were repeated for each character type.
+Limited extensibility: Adding new characters would require modifying the existing conditional statements in the Character class.
+Difficulty in changing behavior: It would be difficult to dynamically change a character's defense strategy (e.g., switching from shield to dodge).
+
+We addressed these problems by introducing the Strategy Pattern:
+
+Separate interfaces: We created interfaces AttackStrategy and DefenseStrategy to define the attack and defense behaviors independently.
+Concrete strategy classes: We implemented specific attack and defense strategies (e.g., SwingSword, CastSpell, ShieldDefense, DodgeDefense).
+Character with strategy references: The Character class holds references to specific implementations of the strategy interfaces. 
+This allows for dynamic behavior changes based on the chosen strategy.
+
+This refactored code using the Strategy Pattern promotes better code organization, reusability, and flexibility in handling character behavior.
