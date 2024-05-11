@@ -1,0 +1,49 @@
+          <<interface>>
+          AttackStrategy
+                |
+                | attack()
+                |
+          -------     -------
+          |                 |
+      SwingSword         CastSpell
+          |                 |
+          -------     -------
+                |
+                | attack()
+                |
+          -------     -------
+          |                 |
+      ShootArrow
+
+          <<interface>>
+          DefenseStrategy
+                |
+                | defend()
+                |
+          -------     -------
+          |                 |
+      ShieldDefense     DodgeDefense
+          |                 |
+          -------     -------
+                |
+                | defend()
+                |
+          -------
+          MagicBarrierDefense
+
+          <<interface>>
+                Character
+                    |
+                    | attack()
+                    | defend()
+                    |
+          -------     -------
+          |                 |
+      Knight             Wizard
+          |                 |
+          -------     -------
+                |
+                | defend() (setDefenseStrategy)
+                |
+          -------
+          Archer
